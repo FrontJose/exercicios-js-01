@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex04</title>
+</head>
+
+<body>
+
+    <input type="text" id="meuCampo" />
+    <script>
+        const meuCampo = document.getElementById("meuCampo");
+        meuCampo.addEventListener("focus", function () {
+            console.log("Campo ganhou o foco.");
+        });
+
+        meuCampo.addEventListener("blur", function () {
+            console.log("Campo perdeu o foco.");
+        });
+    </script>
+
+</body>
+
+</html>

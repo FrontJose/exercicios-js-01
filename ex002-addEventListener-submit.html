@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex02</title>
+</head>
+
+<body>
+    <form id="meuFormulario">
+        <input type="text" name="nome" />
+        <input type="submit" value="Enviar">
+    </form>
+    <script>
+        const meuFormulario = document.querySelector('#meuFormulario')
+
+        meuFormulario.addEventListener("submit", function(event){
+            event.preventDefault();
+            nome = event.target.elements.nome.value;
+            if(nome != ""){
+                alert( nome )
+            }else {
+                alert('Você deve digitar seu nome antes de clicar no enviar')
+            }
+
+            
+        })
+    </script>
+
+</html>
