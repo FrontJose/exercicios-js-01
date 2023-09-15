@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex014-manipulando-Audio</title>
+    
+</head>
+
+<body>
+    <button id="play">Play / Pause</button>
+    <button id="avancar">avancar</button>
+    <button id="voltar">voltar</button>
+    <button id="aumentaVolume"> + volume</button>
+    <button id="diminuiVolume"> - volume</button>
+    
+    <script>
+        const audioElement = new Audio('/sons/luna-rise-part-one.mp3')
+        const play = document.querySelector('#play')
+        const avancar = document.querySelector('#avancar')
+        const voltar = document.querySelector('#voltar')
+        const aumentaVolume = document.querySelector('#aumentaVolume')
+        const diminuiVolume = document.querySelector('#diminuiVolume')
+        
+        play.addEventListener('click', function() {
+            if(audioElement.paused) {
+                audioElement.play();
+            }else {
+                audioElement.pause();
+            }
+        });
+        
+        avancar.addEventListener('click', function(){
+            audioElement.currentTime+=15;
+        })
+
+        voltar.addEventListener('click', function(){
+            audioElement.currentTime-=15;
+        })
+
+        aumentaVolume.addEventListener('click', function() {
+            audioElement.volume+=0.1;
+        })
+
+        diminuiVolume.addEventListener('click', function() {
+            audioElement.volume-=0.1;
+        })
+    </script>
+</body>
+
+</html>
